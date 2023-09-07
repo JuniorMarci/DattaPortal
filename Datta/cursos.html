@@ -1,0 +1,205 @@
+<style>
+.carousel-container {
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.checkscarro {
+  display: none;
+}
+
+.slides {
+  width: 600%; /* Alterado para acomodar os seis slides */
+  height: 100%;
+  position: absolute;
+  display: flex;
+  transition: left 0.5s;
+  left: 0;
+}
+
+.slide {
+  width: 16.66%; /* Alterado para 16.66% para acomodar seis slides em uma linha */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.slide h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.slide p {
+  font-size: 16px;
+}
+
+.navigation {
+  width: 150%;
+  height: 50px;
+  position: absolute;
+  bottom: 0px; /* Afastado do menu de cursos */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+}
+
+.voltation {
+  width: 50%;
+  height: 50px;
+  position: absolute;
+  bottom: 0px; /* Afastado do menu de cursos */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adicionado para centralizar verticalmente */
+}
+
+.navigation label,
+.voltation label {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0;
+  cursor: pointer;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Exibe o próximo botão de navegação quando o slide correspondente estiver selecionado */
+#slide1:checked ~ .navigation label:nth-of-type(2),
+#slide2:checked ~ .navigation label:nth-of-type(3),
+#slide3:checked ~ .navigation label:nth-of-type(4),
+#slide4:checked ~ .navigation label:nth-of-type(5),
+#slide5:checked ~ .navigation label:nth-of-type(6),
+#slide6:checked ~ .navigation label:nth-of-type(1) {
+  visibility: visible;
+}
+
+/* Exibe o botão de voltar quando o slide correspondente estiver selecionado */
+#slide1:checked ~ .voltation label:nth-of-type(6),
+#slide2:checked ~ .voltation label:nth-of-type(1),
+#slide3:checked ~ .voltation label:nth-of-type(2),
+#slide4:checked ~ .voltation label:nth-of-type(3),
+#slide5:checked ~ .voltation label:nth-of-type(4),
+#slide6:checked ~ .voltation label:nth-of-type(5) {
+  visibility: visible;
+}
+
+#slide1:checked ~ .slides {
+  left: 0;
+}
+
+#slide2:checked ~ .slides {
+  left: -100%;
+}
+
+#slide3:checked ~ .slides {
+  left: -200%;
+}
+
+#slide4:checked ~ .slides {
+  left: -300%;
+}
+
+#slide5:checked ~ .slides {
+  left: -400%;
+}
+
+#slide6:checked ~ .slides {
+  left: -500%;
+}
+
+h2 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+p {
+  color: rgb(33, 34, 38);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+
+<div class="carousel-container">
+  <div class="carousel">
+    <input type="radio" name="carousel" class="checkscarro" id="slide1" checked>
+    <input type="radio" name="carousel" class="checkscarro" id="slide2">
+    <input type="radio" name="carousel" class="checkscarro" id="slide3">
+    <input type="radio" name="carousel" class="checkscarro" id="slide4">
+    <input type="radio" name="carousel" class="checkscarro" id="slide5">
+    <input type="radio" name="carousel" class="checkscarro" id="slide6">
+    <div class="slides">
+      <div class="slide">
+        <h2>Slide 1</h2>
+        <img src="imgs\cursos\curso1.png" alt="Slide 1">
+        <p>Texto do Slide 1</p>
+      </div>
+      <div class="slide">
+        <h2>Slide 2</h2>
+        <img src="imgs\cursos\curso2.png" alt="Slide 2">
+        <p>Texto do Slide 2</p>
+      </div>
+      <div class="slide">
+        <h2>Slide 3</h2>
+        <img src="imgs\cursos\curso3.png" alt="Slide 3">
+        <p>Texto do Slide 3</p>
+      </div>
+      <div class="slide">
+        <h2>Slide 4</h2>
+        <img src="imgs\cursos\curso1.png" alt="Slide 4">
+        <p>Texto do Slide 4</p>
+      </div>
+      <div class="slide">
+        <h2>Slide 5</h2>
+        <img src="imgs\cursos\curso2.png" alt="Slide 5">
+        <p>Texto do Slide 5</p>
+      </div>
+      <div class="slide">
+        <h2>Slide 6</h2>
+        <img src="imgs\cursos\curso3.png" alt="Slide 6">
+        <p>Texto do Slide 6</p>
+      </div>
+    </div>
+    <div class="navigation">
+      <label for="slide1">></label>
+      <label for="slide2">></label>
+      <label for="slide3">></label>
+      <label for="slide4">></label>
+      <label for="slide5">></label>
+      <label for="slide6">></label>
+    </div>
+    <div class="voltation">
+      <label for="slide1"><</label>
+      <label for="slide2"><</label>
+      <label for="slide3"><</label>
+      <label for="slide4"><</label>
+      <label for="slide5"><</label>
+      <label for="slide6"><</label>
+    </div>
+  </div>
+</div>

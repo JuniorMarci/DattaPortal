@@ -1,0 +1,268 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* Estilos do menu superior */
+.menu-superior {
+  background-color: rgb(33, 34, 38);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu-superior .botao-menu {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-superior .botao-menu:hover {
+  background-color: white;
+  color: rgb(33, 34, 38);
+}
+
+.menu-superior .botao-menu.destaque {
+  background-color: white;
+  color: rgb(33, 34, 38);
+  font-weight: bold;
+}
+
+.menu-superior .botao-menu.destaque:hover {
+  background-color: transparent;
+  color: white;
+}
+
+
+/* Estilos dos títulos */
+h1 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+}
+
+h2 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* Estilos do texto corrido */
+p {
+  color: rgb(33, 34, 38);
+  font-size: 16px;
+}
+
+/* Estilos dos botões */
+.botao-acao {
+  background-color: rgb(33, 34, 38);
+  color: white;
+}
+
+.botao-link {
+  background-color: transparent;
+  color: rgb(33, 34, 38);
+  border: none;
+}
+
+/* Estilos do menu inferior */
+.menu-inferior {
+  background-color: rgb(33, 34, 38);
+}
+
+.menu-inferior a {
+  color: white;
+}
+
+.menu-inferior a:hover {
+  color: white;
+}
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* Estilos do menu superior */
+.menu-superior {
+  background-color: rgb(33, 34, 38);
+}
+
+.menu-superior .botao-menu {
+  background-color: rgb(33, 34, 38);
+  color: white;
+}
+
+/* Estilos dos títulos */
+h1 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+}
+
+h2 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+h3 {
+  color: rgb(33, 34, 38);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* Estilos do texto corrido */
+p {
+  color: rgb(33, 34, 38);
+  font-size: 16px;
+}
+
+/* Estilos dos botões */
+.botao-acao {
+  background-color: rgb(33, 34, 38);
+  color: white;
+}
+
+.botao-link {
+  background-color: transparent;
+  color: rgb(33, 34, 38);
+  border: none;
+}
+
+/* Estilos do menu superior */
+.menu-superior {
+  background-color: rgb(33, 34, 38);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu-superior .botao-menu {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-superior .botao-menu:hover {
+  background-color: white;
+  color: rgb(33, 34, 38);
+}
+
+.menu-superior .botao-menu.destaque {
+  background-color: white;
+  color: rgb(33, 34, 38);
+  font-weight: bold;
+}
+
+.menu-superior .botao-menu.destaque:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.menu-superior .botao-menu.empresa {
+  background-color: rgb(0, 120, 215);;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-superior .botao-menu.empresa:hover {
+  background-color: transparent;
+  color: white;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .menu-superior .botao-menu {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu-superior .botao-menu.destaque {
+    margin-bottom: 0;
+  }
+}
+
+/* Chamada inicial */
+.containerChamada {
+  display: flex;
+  justify-content: center;
+}
+
+.frase-de-efeito {
+  display: flex;
+  align-items: center;
+}
+
+.frase-de-efeito h1,
+.frase-de-efeito img {
+  flex: 1;
+  max-width: 70%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
